@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def requier_logged_user
+  def require_logged_user
     redirect_to new_session_path, alert: "You need to be logged in!" unless user_signed_in?
   end
 

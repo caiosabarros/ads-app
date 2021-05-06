@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    
+   <div class="container">
     <p>
     <%= flash.notice %>
     <%= flash.alert %>
@@ -20,6 +20,8 @@
     <nav>
     <% if user_signed_in? %>
       <%= button_to "Log Out", sign_out_sessions_path, method: :delete %>
+      <%= link_to "Create New Ad", new_ad_path %>
+    
     <% else %>
     <%= link_to 'Sign Up', new_user_path %>
     <%= link_to 'Sign In', new_session_path %> 
@@ -28,6 +30,6 @@
   
 
     <%= yield %>
-    
+   </div>
   </body>
 </html>
